@@ -19,6 +19,11 @@ RSpec.describe TicTacToe::Board do
       result = subject.mark(1, 1, 'o')
       expect(result.cell(1, 1)).to eq 'o'
     end
+
+    it 'dont mark at the other position' do
+      result = subject.mark(1, 1, 'o')
+      expect(result.cell(1, 0)).to eq nil
+    end
   end
 
   describe 'cell_marked?' do

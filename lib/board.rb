@@ -3,7 +3,7 @@
 module TicTacToe
   class Board
     def initialize(cells = nil)
-      @cells = cells || Array.new(3, Array.new(3, nil))
+      @cells = cells || [Array.new(3, nil), Array.new(3, nil), Array.new(3, nil)]
     end
 
     def cell(point_x, point_y)
@@ -11,10 +11,8 @@ module TicTacToe
     end
 
     def mark(point_x, point_y, mark)
-      marked_cells = @cells
-      marked_cells[point_y][point_x] = mark
-
-      Board.new(marked_cells)
+      @cells[point_y][point_x] = mark
+      Board.new(@cells)
     end
 
     def cell_marked?(point_x, point_y, mark)
