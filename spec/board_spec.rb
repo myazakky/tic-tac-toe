@@ -73,5 +73,19 @@ RSpec.describe TicTacToe::Board do
         expect(board.bingo?('o')).to eq true
       end
     end
+
+    describe '#display' do
+      let(:cells) {
+        [%w[x o x],
+         %w[o x o],
+         %w[x o x]]
+      }
+
+      it 'convert to string for display' do
+        expected = "x o x\no x o\nx o x"
+
+        expect(subject.display).to eq expected
+      end
+    end
   end
 end

@@ -58,5 +58,11 @@ module TicTacToe
     def bingo?(mark)
       horizontal_bingo?(mark) || vertical_bingo?(mark) || diagonal_bingo?(mark)
     end
+
+    def display
+      @cells.map do |row|
+        row.map { |cell| cell.nil? ? '￭' : cell }.join(' ') 
+      end.join("\n")
+    end
   end
 end
