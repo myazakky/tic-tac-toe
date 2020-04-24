@@ -27,10 +27,8 @@ RSpec.describe TicTacToe::Board do
   end
 
   describe 'cell_marked?' do
-    it 'return true when the cell is marked' do
-      marked = subject.mark(1, 1, 'o')
-      result = marked.cell_marked?(1, 1, 'o')
-      expect(result).to eq true
+    it 'return false when the cell is nil' do
+      expect(subject.cell_marked?(0, 0)).to eq false
     end
   end
 

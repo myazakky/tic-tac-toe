@@ -15,8 +15,8 @@ module TicTacToe
       Board.new(@cells)
     end
 
-    def cell_marked?(point_x, point_y, mark)
-      cell(point_x, point_y) == mark
+    def cell_marked?(point_x, point_y)
+      !cell(point_x, point_y).nil?
     end
 
     def horizontal_bingo?(mark)
