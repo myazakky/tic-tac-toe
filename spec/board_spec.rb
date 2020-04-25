@@ -33,11 +33,11 @@ RSpec.describe TicTacToe::Board do
   end
 
   context 'reach' do
-    let(:cells) {
+    let(:cells) do
       [%w[o U o],
        %w[L C R],
        %w[o D o]]
-    }
+    end
 
     describe 'horizontal_bingo?' do
       it 'return true when there are horizontal bingo' do
@@ -78,11 +78,11 @@ RSpec.describe TicTacToe::Board do
     end
 
     describe '#display' do
-      let(:cells) {
+      let(:cells) do
         [%w[x o x],
          %w[o x o],
          %w[x o x]]
-      }
+      end
 
       it 'convert to string for display' do
         expected = "x o x\no x o\nx o x"

@@ -59,7 +59,7 @@ module TicTacToe
 
     def display
       @cells.map do |row|
-        row.map { |cell| cell.nil? ? '￭' : cell }.join(' ') 
+        row.map { |cell| cell.nil? ? '￭' : cell }.join(' ')
       end.join("\n")
     end
   end
